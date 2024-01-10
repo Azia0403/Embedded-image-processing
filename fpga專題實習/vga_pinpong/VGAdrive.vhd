@@ -173,38 +173,7 @@ begin
     );
   RGB : process(row, column)
   begin
-    -- wait until clock = '1';
     
---    if  row < 360 and column < 350  then
---      red <= '1';
---    else
---      red <= '0';
---    end if;
-    
---    if  row < 360 and column > 250 and column < 640  then
---      green <= '1';
---    else
---      green <= '0';
---    end if;
-    
---    if  row > 120 and row < 480 and column > 150 and column < 500  then
---      blue <= '1';
---    else
---      blue <= '0';
---    end if;
---320  80row 480 clunm 640
---    if led(7) = '1' then
---        if  row < 270 and row>210 and column > 40 and column < 100  then
---            green <= '1';
-             
---        end if;
---     else
---        if  row < 270 and row>210 and column > 40 and column < 100  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
      if led(7) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 70, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -218,17 +187,7 @@ begin
             red <= '0';
           end if;
       end if;
---    if led(6) = '1' then
---        if  row < 270 and row>210 and column > 110 and column < 170  then
---            red <= '1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 110 and column < 170  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(6) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 140, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -243,17 +202,7 @@ begin
           end if;
       end if;
     
---    if led(5) = '1' then
---        if  row < 270 and row>210 and column > 180 and column < 240  then
---            blue <= '1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 180 and column < 240  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(5) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 210, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -268,18 +217,7 @@ begin
           end if;
       end if;
    
---    if led(4) = '1' then
---        if  row < 270 and row>210 and column > 250 and column < 310  then
---            green <= '1';
---            blue<='1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 250 and column < 310  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(4) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 280, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -294,18 +232,7 @@ begin
         end if;
       end if;
    
---    if led(3) = '1' then
---        if  row < 270 and row>210 and column > 320 and column < 380  then
---            green <= '1';
---            red<='1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 320 and column < 380  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(3) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 350, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -320,18 +247,7 @@ begin
           end if;
       end if;
     
---    if led(2) = '1' then
---        if  row < 270 and row>210 and column > 390 and column < 450  then
---            red <= '1';
---            blue<='1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 390 and column < 450  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(2) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 420, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -346,19 +262,7 @@ begin
         end if;
       end if;
     
---    if led(1) = '1' then
---        if  row < 270 and row>210 and column > 460 and column < 520  then
---            green <= '1';
---            blue<='1';
---            red<='1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 460 and column < 520  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(1) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 490, 30) then
         -- 如果在圓形內，設置相應的顏色
@@ -372,17 +276,7 @@ begin
             red <= '0';
         end if;
       end if;
---    if led(0) = '1' then
---        if  row < 270 and row>210 and column > 530 and column < 590  then
---            green <= '1';
---        end if;
---     else
---        if  row < 270 and row>210 and column > 530 and column < 590  then
---            green <= '0';
---            blue<='0';
---            red<='0';
---        end if;
---    end if;
+
     if led(0) = '1' then
       if is_in_circle(conv_integer(row), conv_integer(column), 240, 560, 30) then
         -- 如果在圓形內，設置相應的顏色
